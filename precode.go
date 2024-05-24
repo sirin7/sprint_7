@@ -89,7 +89,7 @@ func TestMainHandlerWhenWrongCity(t *testing.T) {
 
 	assert.Equal(t, http.StatusBadRequest, responseRecorder.Code)
 
-	expected := "wrong city"
+	expected := "wrong city value"
 	body := responseRecorder.Body.String()
 	assert.Equal(t, expected, body)
 }
